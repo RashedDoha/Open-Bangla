@@ -1,7 +1,19 @@
-function setup() {
-  createCanvas(document.documentElement.clientWidth, document.documentElement.clientHeight);
-}
+$(document).ready(function() {
+    var wrapperMenu = document.querySelector('.hamburger');
 
-function draw() {
-  background(220);
-}
+    wrapperMenu.addEventListener('click', function(){
+      wrapperMenu.classList.toggle('open');
+
+      var toggleWidth = $(".drawer-layout").width() == 250 ? "0px" : "250px";
+      console.log(toggleWidth);
+      $('.drawer-layout').animate({
+         width: toggleWidth
+      });
+
+      $('body').toggleClass('hideScrollbars');
+
+
+  });
+
+
+});

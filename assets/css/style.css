@@ -1,13 +1,187 @@
-html {
+* {
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Raleway', 'sans-serif';
+}
+
+html,body {
     min-height: 100vh;
     min-width: 100vw;
+    margin: 0;
+    padding: 0;
 }
 body {
     max-width: 100vw;
     overflow-x: hidden;
-    margin: 0
 }
-#defaultCanvas0 {
+
+
+
+header {
+    color: white;
+    background: rgba(2,2,2, 0.5);
+    position: fixed;
+    min-width: 100%;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    font-family: 'Raleway', sans-serif;
+    -webkit-box-shadow: 0px 2px 7px -2px rgba(0,0,0,0.7);
+    -moz-box-shadow: 0px 2px 7px -2px rgba(0,0,0,0.7);
+    box-shadow: 0px 2px 7px -2px rgba(0,0,0,0.7);
+}
+
+.hamburger {
+    height: 30px;
+    width: 30px;
+    margin: 0 0 0 15px;
+    display: none;
+}
+
+.hamburger.open {
+  transform: rotate(-45deg);
+}
+
+.line-menu {
+  background-color: #fff;
+  border-radius: 2px;
+  width: 100%;
+  height: 3px;
+}
+
+.line-menu.half {
+  width: 50%;
+}
+
+.hamburger hr {
+    margin: 10px 0;
+    border: 1px solid white;
+    transform-origin: top left;
+}
+
+
+/* Drawer styles */
+
+.drawer-layout {
     height: 100vh;
-    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 0px;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 64px;
+    z-index: 9;
+    overflow-x: hidden;
+    overflow-y: visible;
+    -webkit-box-shadow: 4px 0px 12px -2px rgba(0,0,0,0.5);
+    -moz-box-shadow: 4px 0px 12px -2px rgba(0,0,0,0.5);
+    box-shadow: 4px 0px 12px -2px rgba(0,0,0,0.5);
+    
+
+
+}
+
+nav.drawer {
+    min-height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+nav > a {
+    color: rgba(255,255,255, 0.7);
+}
+
+nav > a:hover {
+    color: rgba(255,255,255, 1);
+}
+
+nav.drawer > a {
+    margin: 30px 0 30px;
+    flex-grow: 1;
+}
+
+
+nav#header-menu {
+    display: flow;
+    justify-content: flex-end;
+
+}
+
+nav#header-menu > a {
+    color: white;
+    padding: 10px 18px 20px;
+    color: rgba(255,255,255, 0.7);
+}
+
+nav#header-menu > a:hover {
+    border-bottom: 2px solid white;
+}
+
+#defaultCanvas0 {
+    cursor: url('../img/chalk.png'), auto;
+}
+
+/* Utility classes */
+.hideScrollbars {
+    overflow: hidden;
+}
+
+/* Animations  */
+
+.line-menu.start {
+  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transform-origin: right;
+}
+
+.open .line-menu.start {
+  transform: rotate(-90deg) translateX(3px);
+}
+
+.line-menu.end {
+  align-self: flex-end;
+  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transform-origin: left;
+}
+
+.open .line-menu.end {
+  transform: rotate(-90deg) translateX(-3px);
+}
+
+
+/* Media Queries */
+
+@media (max-width: 767px) {
+    nav#header-menu {
+        display: none;
+    }
+
+    header {
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: transform 330ms ease-out;
+    }
+
+
+}
+
+@media (min-width: 768px) {
+    .drawer-layout {
+        display: none;
+    }
 }
