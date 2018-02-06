@@ -4,7 +4,8 @@
         <meta charset="utf-8">
         <title></title>
     </head>
-    <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway|Roboto|Roboto+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway:100,300|Roboto|Roboto+Condensed:100,300,400" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
     <body>
@@ -12,10 +13,17 @@
         <header>
             <nav id='header-menu'>
                 <a href='#'>Home</a>
-                <a href='#'>Learn</a>
+                <a href='#learnLink'>Learn</a>
                 <a href='#'>Datasets</a>
                 <a href='#'>Contribute</a>
                 <a href='#'>Affiliations</a>
+                <form action="" class="search-form">
+                    <input class="search-box" type="text"/>
+                    <button class="search-button btn btn-search">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </form>
+
             </nav> <!-- Primary navbar -->
 
             <div class="hamburger">
@@ -37,15 +45,59 @@
 
         </header> <!-- Nav Bar -->
 
-        <section id='sketchboard'>
-            <script src='assets/js/sketch.js'></script>
-        </section> <!-- sketchboard -->
+        <div class="main-body">
+            <a id="canvasLink" href="#"></a>
+            <section id='sketchboard'>
+                <script src='assets/js/sketch.js'></script>
+            </section> <!-- sketchboard -->
+
+            <a id="learnLink" href="#"></a>
+            <section id='learn'>
+
+                <div class="section-image">
+                    <img src="assets/img/learning.svg" alt="learndatascience">
+                </div> <!-- Section Image -->
+
+                <div class="section-body">
+                    <h2 class="section-header">Learn Machine Learning in Bengali</h2>
+
+                    <p class="section-content">
+                        Big data. Virtually every organization has it and most want to find ways to use it to help them grow their business.
+
+                        That’s where data scientists come in. Data scientists know how to use their skills in math, statistics, programming, and other related subjects to organize large data sets. Then, they apply their knowledge to uncover solutions hidden in the data to take on business challenges and goals.
+
+                        <a href="#">Start Learning Today</a>
+                    </p>
+                </div> <!-- Section Body -->
+
+            </section> <!-- Learn Section -->
+
+
+            <a id="datasetLink" href="#"></a>
+            <section id='dataset'>
+
+                
+
+            </section> <!-- Dataset Section -->
+
+            <section id='contribute'>
+            <a id="contributeLink" href="#"></a>
+            </section> <!-- Contribute Section -->
+
+            <section id='affiliate'>
+            <a id="affiliateLink" href="#"></a>
+            </section> <!-- Affiliations Section -->
+
+        </div>
+
+
 
 
 
 
     </body>
     <script src='assets/js/libs/jquery-2.1.4.min.js'></script>
+    <script src='assets/js/libs/scrollspy.js'></script>
     <script src='assets/js/libs/p5.js'></script>
     <script src='assets/js/main.js'></script>
 </html>

@@ -20,8 +20,9 @@ function windowResized() {
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  var canvas = createCanvas(windowWidth, windowHeight);
   background(board);
+  canvas.parent('sketchboard');
   current = createVector(0,0);
   previous = createVector(0,0);
 }
