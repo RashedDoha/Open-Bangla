@@ -8,6 +8,7 @@ $(document).ready(function() {
     $affiliate = $('nav#header-menu > a:nth-child(5)');
     elems = [$learn, $dataset, $contribute, $affiliate];
     $currentElem = null;
+    $previousScroll = 0;
 
     wrapperMenu.addEventListener('click', function() {
         wrapperMenu.classList.toggle('open');
@@ -19,6 +20,61 @@ $(document).ready(function() {
         $('.drawer-layout').animate({width: toggleWidth});
 
         $('body').toggleClass('hideScrollbars');
+
+    });
+
+    // $('.image-column > img').each(function(image, elem) {
+    //     $top = $(elem).position().top;
+    //     $updated = $top - 250;
+    //     $(elem).css('top', $updated);
+    // });
+
+    // $bottom = $('.section-image:last-child').position().top + $('.image-column:nth-child(1)').height();
+    // $newelem = $('.image-column').clone();
+    // $newelem.css('top', $bottom);
+    // $('#dataset .section-image').append($newelem);
+
+    $(window).scroll(function() {
+        // $pos = $(window).scrollTop();
+        // if($pos > $previousScroll) {
+        //     // Scroll Down
+        //     $scrolledInto = $pos + $(window).height() - $('#datasetLink').offset().top;
+        //
+        //     if($scrolledInto >= 0 && $pos <= $('#contributeLink').offset().top) {
+        //         console.log("Scrolling Down");
+        //         // $('.image-column > img').each(function(image, elem) {
+        //         //     $top = $(elem).position().top;
+        //         //     $updated = $top - $scrolledInto*0.01;
+        //         //     $(elem).css('top', $updated);
+        //         // });
+        //
+        //         $top = $('.image-column').position().top;
+        //         $updated = $top - $scrolledInto*0.001;
+        //         $('.image-column').css('top', $updated);
+        //
+        //     }
+        // }
+        // else {
+        //     // Scroll Up
+        //     $scrolledInto = $('#contributeLink').offset().top - $pos;
+        //     if($pos + $(window).height() >= $('#datasetLink').offset().top && $pos <= $('#contributeLink').offset().top) {
+        //         console.log("Scrolling Up");
+        //         // $('.image-column > img').each(function(image, elem) {
+        //         //     $top = $(elem).position().top;
+        //         //     $updated = $top + $scrolledInto*0.01;
+        //         //     $(elem).css('top', $updated);
+        //         // });
+        //
+        //         $top = $('.image-column').position().top;
+        //         $updated = $top + $scrolledInto*0.001;
+        //         $('.image-column').css('top', $updated);
+        //
+        //
+        //
+        //     }
+        // }
+        //
+        // $previousScroll = $pos;
 
     });
 

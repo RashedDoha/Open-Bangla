@@ -42,6 +42,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+    z-index: 900;
     font-family: 'Raleway', sans-serif;
     -webkit-box-shadow: 0px 2px 7px -2px rgba(0,0,0,0.7);
     -moz-box-shadow: 0px 2px 7px -2px rgba(0,0,0,0.7);
@@ -187,18 +188,6 @@ nav#header-menu > form.search-form > button.search-button {
     transition: all 0.4s ease-in-out;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 section#sketchboard {
     height: 100vh
 }
@@ -236,16 +225,16 @@ section#learn {
 
 
 
-#learn .section-body .section-content{
+#learn .section-body .section-content, #dataset .section-body .section-content{
     font-size: 1.2em;
     line-height: 1.8em;
 }
 
-#learn .section-body .section-content > a {
+#learn .section-body .section-content > a, #dataset .section-body .section-content > a{
     font-weight: 300;
 }
 
-#learn .section-body > h2.section-header {
+#learn .section-body > h2.section-header, #dataset .section-body > h2.section-header {
     font-family: 'Raleway', 'sans-serif';
     font-weight: 200;
     font-size: 2em;
@@ -257,8 +246,53 @@ section#learn {
 /* Section 3 */
 
 section#dataset {
-    background-color: #ccc;
+    background-color: #eee;
+    padding: 0 4vw 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+
 }
+
+#dataset .section-body {
+    flex-basis: 50%;
+}
+
+#dataset .section-image {
+    overflow: hidden;
+    min-height: 75vh;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+#dataset .section-image > img {
+    flex-basis: 30%;
+    display: block;
+    max-height: 120px;
+}
+
+/* #dataset .section-image .image-column > img:nth-child(1) {
+    top: 10%;
+}
+
+#dataset .section-image .image-column > img:nth-child(2) {
+    top: 40%;
+}
+
+#dataset .section-image .image-column > img:nth-child(3) {
+    bottom: 10%;
+} */
+
+
+
+
+
 
 /* Section 4 */
 
@@ -348,6 +382,21 @@ section#affiliate {
         align-items: center;
         justify-content: center;
     }
+
+    section#dataset {
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 4vh;
+    }
+
+    #dataset .section-image {
+        flex-direction: row;
+        min-height: auto;
+        min-width: 100%;
+
+    }
+
+
 
 
 
