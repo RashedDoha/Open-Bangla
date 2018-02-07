@@ -218,6 +218,7 @@ section#sketchboard {
     cursor: url('../img/chalk.png'), auto;
 }
 
+
 /* Section 2 */
 
 section#learn {
@@ -247,16 +248,16 @@ section#learn {
 
 
 
-#learn .section-body .section-content, #dataset .section-body .section-content{
+#learn .section-body .section-content, #dataset .section-body .section-content, #contribute .section-body .section-content {
     font-size: 1.2em;
     line-height: 1.8em;
 }
 
-#learn .section-body .section-content > a, #dataset .section-body .section-content > a{
+#learn .section-body .section-content > a, #dataset .section-body .section-content > a, #contribute .section-body .section-content > a {
     font-weight: 300;
 }
 
-#learn .section-body > h2.section-header, #dataset .section-body > h2.section-header {
+#learn .section-body > h2.section-header, #dataset .section-body > h2.section-header, #contribute .section-body > h2.section-header {
     font-family: 'Raleway', 'sans-serif';
     font-weight: 200;
     font-size: 2em;
@@ -297,6 +298,7 @@ section#dataset {
     flex-basis: 30%;
     display: block;
     max-height: 120px;
+    max-width: 20vw;
 }
 
 /* #dataset .section-image .image-column > img:nth-child(1) {
@@ -320,12 +322,76 @@ section#dataset {
 
 section#contribute {
     background-color: #f4f4f4;
+    padding: 0 10% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+#contribute .section-body {
+    text-align: center;
+    z-index: 50;
+}
+
+#contribute .landingImage {
+    position: absolute;
+    min-height: 200px;
+    transition: all 0.6s ease-in-out;
+}
+
+#contribute .topLeftLand {
+    top: -300px;
+    left: -300px;
+}
+
+#contribute .bottomRightLand {
+    top: 120vh;
+    left: 120vw;
+    transition-duration: 1.2s;
+}
+
+#contribute .landingImage > img {
+    height: 100%;
+    width: 100%;
+
+}
+
+#contribute  .bottomRightLand > img {
+    height: 250px;
+    width: 250px;
+}
+
+
+#contribute .activeTopLeft {
+    top: -10px;
+    left: -10px;
+    transform: rotate(135deg);
+}
+
+#contribute .activeBottomRight {
+    top: calc(100vh - 200px);
+    left: calc(100vw - 170px);
+    transform: rotate(-45deg);
+}
+
+#contribute .section-body .section-content h2.section-header {
+    padding: 0 20% 0;
+    text-align: center;
 }
 
 /* Section 5 */
 
 section#affiliate {
-    background-color: #ddd;
+    background-color: #eee;
+    padding: 0 4vw 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
 }
 
 
@@ -435,6 +501,7 @@ section#affiliate {
         min-width: 100%;
 
     }
+
 
 }
 

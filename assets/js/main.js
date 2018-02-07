@@ -35,8 +35,20 @@ $(document).ready(function() {
     // $('#dataset .section-image').append($newelem);
 
     $(window).scroll(function() {
-        // $pos = $(window).scrollTop();
-        // if($pos > $previousScroll) {
+        $pos = $(window).scrollTop();
+            if($pos + $(window).height() - 300 >= $('#contribute').position().top && $pos <= $('#affiliate').position().top - 300) {
+                if(!$('.topLeftLand').hasClass('activeTopLeft')) {
+                    $('.topLeftLand').addClass('activeTopLeft');
+                }
+
+                if(!$('.bottomRightLand').hasClass('activeBottomRight')) {
+                    $('.bottomRightLand').addClass('activeBottomRight');
+                }
+            }
+            else {
+                $('.landingImage').removeClass('activeTopLeft');
+                $('.landingImage').removeClass('activeBottomRight');
+            }
         //     // Scroll Down
         //     $scrolledInto = $pos + $(window).height() - $('#datasetLink').offset().top;
         //
@@ -72,9 +84,6 @@ $(document).ready(function() {
         //
         //
         //     }
-        // }
-        //
-        // $previousScroll = $pos;
 
     });
 
@@ -110,6 +119,9 @@ $(document).ready(function() {
             }
         }
     });
+
+
+
 
 });
 
