@@ -34,8 +34,27 @@ $(document).ready(function() {
     // $newelem.css('top', $bottom);
     // $('#dataset .section-image').append($newelem);
 
+    // Implement slider in mobile
+
+
     $(window).scroll(function() {
         $pos = $(window).scrollTop();
+        if($(window).width() <= 767) {
+            if($pos > $previousScroll) {
+                console.log("Scrolling Down");
+                if($pos + $(window).height() >= $('#affiliate').position().top && $pos <= $('footer').position().top) {
+                    $('#affiliate .section-image .image-row > img').css('transform', 'translateX(-150px)');
+                }
+            } else if($pos < $previousScroll) {
+                console.log("Scrolling Up");
+                if($pos < $('footer').position().top && $pos >= $('#affiliate').position().top) {
+
+                    $('#affiliate .section-image .image-row > img').css('transform', 'translateX(200px)');
+                }
+            }
+
+            $previousScroll = $pos;
+        }
             if($pos + $(window).height() - 300 >= $('#contribute').position().top && $pos <= $('#affiliate').position().top - 300) {
                 if(!$('.topLeftLand').hasClass('activeTopLeft')) {
                     $('.topLeftLand').addClass('activeTopLeft');
