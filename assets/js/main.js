@@ -10,6 +10,121 @@ $(document).ready(function() {
     $currentElem = null;
     $previousScroll = 0;
 
+    springImages();
+    fillDigits();
+    var canvasDiv = document.getElementById('canvasDiv');
+    var canvas = document.createElement('canvas');
+    var canvasWidth = 170;
+    var canvasHeight = 230;
+    canvas.setAttribute('width', canvasWidth);
+    canvas.setAttribute('height', canvasHeight);
+    canvas.setAttribute('id', 'canvas');
+    canvasDiv.appendChild(canvas);
+    if (typeof G_vmlCanvasManager != 'undefined') {
+        canvas = G_vmlCanvasManager.initElement(canvas);
+    }
+    var context = canvas.getContext("2d");
+
+    var clickX = new Array();
+    var clickY = new Array();
+    var clickDrag = new Array();
+    var paint;
+
+    function addClick(x, y, dragging) {
+        clickX.push(x);
+        clickY.push(y);
+        clickDrag.push(dragging);
+    }
+
+    var press = function(e) {
+            var mouseX = (e.changedTouches
+                    ? e.changedTouches[0].pageX
+                    : e.pageX) - this.offsetLeft,
+                mouseY = (e.changedTouches
+                    ? e.changedTouches[0].pageY
+                    : e.pageY) - this.offsetTop;
+
+            paint = true;
+            addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop);
+            redraw();
+        },
+
+        drag = function(e) {
+            var mouseX = (e.changedTouches
+                    ? e.changedTouches[0].pageX
+                    : e.pageX) - this.offsetLeft,
+                mouseY = (e.changedTouches
+                    ? e.changedTouches[0].pageY
+                    : e.pageY) - this.offsetTop;
+            if (paint) {
+                addClick(mouseX, mouseY, true);
+                redraw();
+            }
+            e.preventDefault();
+        },
+
+        release = function() {
+            paint = false;
+            redraw();
+        },
+
+        cancel = function() {
+            paint = false;
+        };
+
+    // Add mouse event listeners to canvas element
+    canvas.addEventListener("mousedown", press, false);
+    canvas.addEventListener("mousemove", drag, false);
+    canvas.addEventListener("mouseup", release);
+    canvas.addEventListener("mouseout", cancel, false);
+
+    canvas.addEventListener("touchstart", press, false);
+    canvas.addEventListener("touchmove", drag, false);
+    canvas.addEventListener("touchend", release, false);
+    canvas.addEventListener("touchcancel", cancel, false);
+
+    $('.clear-canvas').on('click', function() {
+        clickX = new Array();
+        clickY = new Array();
+        clickDrag = new Array();
+        context.clearRect(0, 0, canvasWidth, canvasHeight);
+
+    });
+
+    $('.submit-char').on('click', function() {
+        clickX = new Array();
+        clickY = new Array();
+        clickDrag = new Array();
+        context.clearRect(0, 0, canvasWidth, canvasHeight);
+        writeMessage("Thanks!");
+    });
+
+    function writeMessage(msg) {
+        context.fillStyle = '#df4b26';
+        context.font = "30px Raleway";
+        context.fillText(msg, 10, 100);
+    }
+
+    function redraw() {
+        context.clearRect(0, 0, context.canvas.width, context.canvas.height); // Clears the canvas
+
+        context.strokeStyle = "#df4b26";
+        context.lineJoin = "round";
+        context.lineWidth = 5;
+
+        for (var i = 0; i < clickX.length; i++) {
+            context.beginPath();
+            if (clickDrag[i] && i) {
+                context.moveTo(clickX[i - 1], clickY[i - 1]);
+            } else {
+                context.moveTo(clickX[i] - 1, clickY[i]);
+            }
+            context.lineTo(clickX[i], clickY[i]);
+            context.closePath();
+            context.stroke();
+        }
+    }
+
     wrapperMenu.addEventListener('click', function() {
         wrapperMenu.classList.toggle('open');
 
@@ -36,18 +151,17 @@ $(document).ready(function() {
 
     // Implement slider in mobile
 
-
     $(window).scroll(function() {
         $pos = $(window).scrollTop();
-        if($(window).width() <= 767) {
-            if($pos > $previousScroll) {
+        if ($(window).width() <= 767) {
+            if ($pos > $previousScroll) {
                 console.log("Scrolling Down");
-                if($pos + $(window).height() >= $('#affiliate').position().top && $pos <= $('footer').position().top) {
+                if ($pos + $(window).height() >= $('#affiliate').position().top && $pos <= $('footer').position().top) {
                     $('#affiliate .section-image .image-row > img').css('transform', 'translateX(-150px)');
                 }
-            } else if($pos < $previousScroll) {
+            } else if ($pos < $previousScroll) {
                 console.log("Scrolling Up");
-                if($pos < $('footer').position().top && $pos >= $('#affiliate').position().top) {
+                if ($pos < $('footer').position().top && $pos >= $('#affiliate').position().top) {
 
                     $('#affiliate .section-image .image-row > img').css('transform', 'translateX(200px)');
                 }
@@ -55,19 +169,18 @@ $(document).ready(function() {
 
             $previousScroll = $pos;
         }
-            if($pos + $(window).height() - 300 >= $('#contribute').position().top && $pos <= $('#affiliate').position().top - 300) {
-                if(!$('.topLeftLand').hasClass('activeTopLeft')) {
-                    $('.topLeftLand').addClass('activeTopLeft');
-                }
+        if ($pos + $(window).height() - 300 >= $('#contribute').position().top && $pos <= $('#affiliate').position().top - 300) {
+            if (!$('.topLeftLand').hasClass('activeTopLeft')) {
+                $('.topLeftLand').addClass('activeTopLeft');
+            }
 
-                if(!$('.bottomRightLand').hasClass('activeBottomRight')) {
-                    $('.bottomRightLand').addClass('activeBottomRight');
-                }
+            if (!$('.bottomRightLand').hasClass('activeBottomRight')) {
+                $('.bottomRightLand').addClass('activeBottomRight');
             }
-            else {
-                $('.landingImage').removeClass('activeTopLeft');
-                $('.landingImage').removeClass('activeBottomRight');
-            }
+        } else {
+            $('.landingImage').removeClass('activeTopLeft');
+            $('.landingImage').removeClass('activeBottomRight');
+        }
         //     // Scroll Down
         //     $scrolledInto = $pos + $(window).height() - $('#datasetLink').offset().top;
         //
@@ -139,10 +252,82 @@ $(document).ready(function() {
         }
     });
 
-
-
-
 });
+
+function shuffle(array) {
+    var currentIndex = array.length,
+        temporaryValue,
+        randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+}
+
+function springImages() {
+    var imagePos = shuffle([0, 1, 2, 3]);
+    $('.sprung-image').each(function(index, el) {
+        var choice = imagePos[index];
+        if (choice == 0) {
+            $(el).addClass('sprung-image-tr');
+        } else if (choice == 1) {
+            $(el).addClass('sprung-image-tl');
+        } else if (choice == 2) {
+            $(el).addClass('sprung-image-br');
+        } else {
+            $(el).addClass('sprung-image-bl');
+        }
+
+    });
+
+    $('.sprung-image-tr').css('top', '20px');
+    $('.sprung-image-tr').css('left', '10px');
+    $('.sprung-image-tr').css('transform', 'rotate(30deg)');
+
+    $('.sprung-image-tl').css('top', '20px');
+    $('.sprung-image-tl').css('right', '10px');
+    $('.sprung-image-tl').css('transform', 'rotate(-30deg)');
+
+    $('.sprung-image-br').css('bottom', '20px');
+    $('.sprung-image-br').css('left', '10px');
+    $('.sprung-image-br').css('transform', 'rotate(30deg)');
+
+    $('.sprung-image-bl').css('bottom', '20px');
+    $('.sprung-image-bl').css('right', '10px');
+    $('.sprung-image-bl').css('transform', 'rotate(-30deg)');
+
+    $('.sprung-image').css('opacity', 1);
+
+}
+
+function fillDigits() {
+    var digits = [
+        '০',
+        '১',
+        '২',
+        '৩',
+        '৪',
+        '৫',
+        '৬',
+        '৭',
+        '৮',
+        '৯'
+    ];
+    var choice = Math.floor(Math.random() * 10);
+
+    $('.bengali-numeral').text(digits[choice]);
+}
 
 function setUpHighLights() {
     $('#sketchboard').on('scrollSpy:enter', function() {

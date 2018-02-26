@@ -196,7 +196,7 @@ nav#header-menu > form.search-form > input.search-box:focus ~ button.search-butt
 }
 
 nav#header-menu > form.search-form > input.search-box:focus {
-    width: 200px;
+    width: 150px;
 }
 
 nav#header-menu > form.search-form > button.search-button {
@@ -211,11 +211,112 @@ nav#header-menu > form.search-form > button.search-button {
 }
 
 section#sketchboard {
-    height: 100vh
+    height: 100vh;
+    width: 100vw;
+    background: url('../img/woodpat.svg') no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
 }
+
+section#sketchboard .hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section#sketchboard .hero-text h1 {
+    font-family: 'Raleway', 'Open Sans', 'sans-serif';
+    color: #3a1712;
+    margin-bottom: 2px;
+}
+
+section#sketchboard .hero-text p {
+    font-weight: 400;
+    margin: 3px 20px;
+    color: #3a1712;
+    line-height: 1.7em;
+    text-align: center;
+}
+
+section#sketchboard .hero-text .canvas-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 400px;
+    margin: 10px 0;
+}
+
+section#sketchboard .hero-text .canvas-buttons button {
+    background: none;
+    padding: 5px 20px;
+    border-radius: 4px;
+    border: 2px solid #3a1712;
+    color: #3a1712;
+    outline: none;
+    font-family: 'Roboto', 'Open Sans', 'sans-serif';
+}
+
+.bengali-numeral {
+    font-size: 1.8em;
+    line-height: 1.5em;
+}
+
+#canvasDiv {
+    background: url('../img/notebook.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+
+}
+
+canvas#canvas {
+    margin: 5px 0 0 30px;
+    cursor: url('../img/edit.png'), auto;
+}
+
+img.sprung-image {
+    position: absolute;
+    max-height: 200px;
+    transition: all 2s ease-in-out;
+    opacity: 0;
+}
+
+img.sprung-image-tr {
+    top: -100px;
+    left: -100px;
+}
+
+img.sprung-image-tl {
+    top: -100px;
+    right: -100px;
+}
+
+img.sprung-image-br {
+    bottom: -100px;
+    left: -100px;
+}
+
+img.sprung-image-bl {
+    bottom: -100px;
+    right: -100px;
+}
+
+
+
+
+
+
 
 #defaultCanvas0 {
     cursor: url('../img/chalk.png'), auto;
+    position: absolute;
+    height: 300px;
 }
 
 
@@ -620,6 +721,14 @@ footer .footer-main .footer-column-1 .social-icons > a:nth-child(1) {
         max-width: 30vw;
     }
 
+    section#sketchboard {
+        justify-content: center;
+    }
+
+    .sprung-image {
+        display: none;
+    }
+
     footer .footer-main .footer-column-1 .social-icons > a {
         margin: 0 8px 0;
     }
@@ -630,5 +739,19 @@ footer .footer-main .footer-column-1 .social-icons > a:nth-child(1) {
 @media (min-width: 768px) {
     .drawer-layout {
         display: none;
+    }
+}
+
+@media(max-height: 500px) {
+    section#sketchboard {
+        flex-direction: row;
+    }
+
+    .sprung-image {
+        display: none;
+    }
+
+    #canvasDiv {
+        margin: 20px 10px 0 0;
     }
 }

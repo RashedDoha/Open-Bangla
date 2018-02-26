@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="200.544px" height="193.025px" viewBox="0 0 200.544 193.025" enable-background="new 0 0 200.544 193.025"
+	 xml:space="preserve">
+<g>
+	
+		<radialGradient id="SVGID_1_" cx="101.752" cy="-5.3208" r="94.3816" gradientTransform="matrix(0.9096 -0.0796 0.0717 0.8231 17.8091 130.3989)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#231F20"/>
+		<stop  offset="1" style="stop-color:#231F20;stop-opacity:0"/>
+	</radialGradient>
+	<path fill="url(#SVGID_1_)" d="M200.306,110.018c3.594,41.24-33.931,78.218-83.815,82.584
+		c-49.886,4.365-93.239-25.536-96.833-66.774c-3.592-41.24,33.933-78.216,83.819-82.583
+		C153.36,38.88,196.714,68.778,200.306,110.018z"/>
+	<g id="ipad_1_">
+		<g>
+			<g>
+				
+					<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="300.9502" y1="-273.311" x2="135.6306" y2="2.9846" gradientTransform="matrix(0.8782 -0.4784 0.4784 0.8782 -19.1411 271.6008)">
+					<stop  offset="0" style="stop-color:#231F20"/>
+					<stop  offset="0.0836" style="stop-color:#2B2526"/>
+					<stop  offset="0.3132" style="stop-color:#3D3033"/>
+					<stop  offset="0.5434" style="stop-color:#49373C"/>
+					<stop  offset="0.7727" style="stop-color:#513B41"/>
+					<stop  offset="1" style="stop-color:#543D43"/>
+				</linearGradient>
+				<path fill="url(#SVGID_2_)" d="M150.312,4.133l-81.979,8.748h0.002L48.23,13.969c-4.111,0.392-7.084,3.631-6.69,7.746
+					L54.48,156.18c0.39,4.106,4.051,7.019,8.159,6.626l102.091-9.888c4.102-0.396,7.111-4.082,6.721-8.191L158.492,10.464
+					C158.099,6.348,154.412,3.737,150.312,4.133z"/>
+				<path fill="#19B0BF" d="M113.325,153.977c-1.652,0.159-3.123-1.055-3.28-2.711c-0.162-1.661,1.05-3.123,2.702-3.281
+					c1.653-0.161,3.124,1.043,3.282,2.702C116.188,152.347,114.975,153.82,113.325,153.977z"/>
+				<path fill="#2D4760" d="M100.352,18.758c-0.929,0.089-1.759-0.592-1.85-1.529c-0.085-0.938,0.596-1.761,1.525-1.847
+					c0.937-0.09,1.764,0.585,1.853,1.521C101.97,17.84,101.285,18.667,100.352,18.758z"/>
+				<polygon fill="#B4B4B4" points="157.503,138.974 67.091,147.682 55.514,27.006 145.932,18.301 				"/>
+				<polygon opacity="0.2" fill="#FFFFFF" points="157.503,138.974 55.514,27.006 145.932,18.301 				"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

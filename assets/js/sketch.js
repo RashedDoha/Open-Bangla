@@ -10,19 +10,19 @@ var previous;
 
 function preload(){
     board = loadImage('assets/img/chalkboard.jpg');
+    var notebook = document.getElementById('notebook');
 
 }
 
 function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
-    background(board);
+    resizeCanvas(notebook.width, 300);
 
 }
 
 function setup() {
-  var canvas = createCanvas(windowWidth, windowHeight);
-  background(board);
+  var canvas = createCanvas(notebook.width, notebook.width);
   canvas.parent('sketchboard');
+  background(0)
   current = createVector(0,0);
   previous = createVector(0,0);
 }
@@ -136,7 +136,7 @@ Particle.prototype.update = function() {
 // Draw particle and connect it with a line
 // Draw a line to another
 Particle.prototype.display = function(other) {
-  stroke(255, this.lifespan);
+  stroke(0, this.lifespan);
 
   strokeWeight(10);
   //ellipse(this.position.x,this.position.y, 8, 8);
