@@ -4,12 +4,17 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Shironamhin</title>
+        <title>Bengali.Ai People</title>
         <meta name="author" content="Rashed Mohammad Doha">
     </head>
     <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway:100,300|Roboto|Roboto+Condensed:100,300,400" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
 
     <body>
@@ -17,17 +22,18 @@
         <header>
             <div class="header-row">
                 <div class="brand">
-                    <a href="javascript: void(0)"><img class="logo" src="assets/img/004-database.svg" alt=""></a>
+                    <a href="javascript: void(0)"><img class="logo" src="assets/img/bengali.ai_logo.jpg" alt=""> <span class="sublogo"> People</span></a>
                 </div>
                 <nav id='header-menu'>
-                    <a href='#canvasLink'>Home</a>
-                    <a href='#learnLink'>Learn</a>
-                    <a href='#datasetLink'>Datasets</a>
-                    <a href='#contributeLink'>Contribute</a>
-                    <a href='#affiliateLink'>Affiliations</a>
+                    <a href='#slider'>Home</a>
+                    <a href='#activities'>Activities</a>
+                    <a href='#people'>People</a>
+                    <a href='#testimonial'>Testimonials</a>
+                    <a href='#contributeLink'>Contact</a>
+                    
                     <form action="" class="search-form">
                         <input class="search-box" type="text"/>
-                        <button class="search-button btn btn-search">
+                        <button class="search-button">
                         <i class="fa fa-search"></i>
                       </button>
                     </form>
@@ -44,11 +50,11 @@
 
             <div class="drawer-layout">
                 <nav class="drawer">
-                    <a href='#'>Home</a>
-                    <a href='#'>Learn</a>
-                    <a href='#'>Datasets</a>
-                    <a href='#'>Contribute</a>
-                    <a href='#'>Affiliations</a>
+                        <a href='#slider'>Home</a>
+                        <a href='#activities'>Activities</a>
+                        <a href='#people'>People</a>
+                        <a href='#testimonial'>Testimonials</a>
+                        <a href='#contributeLink'>Contact</a>
                 </nav> <!-- Secondary navbar -->
 
             </div> <!-- Drawer Layout -->
@@ -56,171 +62,280 @@
         </header> <!-- Nav Bar -->
 
         <div class="main-body">
-            <a id="canvasLink" href="#"></a>
-            <section id='sketchboard'>
-                <div class="hero-text">
-                    <h1>Welcome to Numta</h1>
-                    <p>
-                        We are an Open Source community involved with creating ML datasets in Bengali.
-                        <br />
-                        You can contribute too by drawing the following Bengali character in the notepad.
-                        <br />
-                        <span class="bengali-numeral"></span>
-                    </p>
-                    <div class="canvas-buttons">
-                        <button class="canvas-control clear-canvas">Clear</button>
-                        <button class="canvas-control submit-char">Submit</button>
-                    </div> <!-- canvas buttons -->
-                </div> <!-- hero text -->
+            
+                <section id="slider" class="home-slider owl-carousel">
+                    <div class="slider-item" style="background-image: url('assets/img/finale.jpg');">
+                    <div class="overlay"></div>
+                    <div class="container">
+                        <div class="row slider-text align-items-center" data-scrollax-parent="true">
+                        <div class="col-md-7 slider-caption col-sm-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                            <h2 class="mb-3" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Collaboration breeds ideas</h2>
+                            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Our goal is to enable experts and novices to share ideas and collaborate on novel research with...</p>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            
+                    <div class="slider-item" style="background-image: url('assets/img/group1.jpg');">
+                    <div class="overlay"></div>
+                    <div class="container">
+                        <div class="row slider-text align-items-center" data-scrollax-parent="true">
+                        <div class="col-md-7 slider-caption col-sm-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                            <h2 class="mb-3" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Blurring the boundaries between disciplines</h2>
+                            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">A family of over 1,000 members across the country contributing to make AI accessible to...</p>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
 
+                    <div class="slider-item" style="background-image: url('assets/img/sakib.jpg');">
+                        <div class="overlay"></div>
+                        <div class="container">
+                        <div class="row slider-text align-items-center" data-scrollax-parent="true">
+                            <div class="col-md-7 slider-caption col-sm-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                            <h2 class="mb-3" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">In Schools and Universities.</h2>
+                            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Students and practiotioners who are stepping into AI research...</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
 
-                    <div id="canvasDiv">
-
-                    </div><!-- canvas div -->
-
-                    <img class="sprung-image" src="assets/img/report.svg" alt="report">
-
-                    <img class="sprung-image" src="assets/img/coffee.svg" alt="tea">
-
-                    <img class="sprung-image" src="assets/img/ipad.svg" alt="ipad">
-
-                    <img class="sprung-image" src="assets/img/stationary.svg" alt="stationary">
-
-            </section> <!-- sketchboard -->
-
-            <a id="learnLink" href="#"></a>
-            <section id='learn'>
-
-                <div class="section-image">
-                    <img src="assets/img/learning.svg" alt="learndatascience">
-                </div> <!-- Section Image -->
-
-                <div class="section-body">
-                    <h2 class="section-header">Machine Learning Education in Bengali</h2>
-
-                    <p class="section-content">
-                        Big data. Virtually every organization has it and most want to find ways to use it to help them grow their business.
-
-                        That’s where data scientists come in. Data scientists know how to use their skills in math, statistics, programming, and other related subjects to organize large data sets. Then, they apply their knowledge to uncover solutions hidden in the data to take on business challenges and goals.
-                        <br />
-                        <a href="javascript: void(0)">Start Learning Today</a>
-                    </p>
-                </div> <!-- Section Body -->
-
-            </section> <!-- Learn Section -->
-
-
-            <a id="datasetLink" href="#"></a>
-            <section id='dataset'>
-                <div class="section-image">
-                        <img src="assets/img/001-database-1.svg" alt="database">
-
-                        <img src="assets/img/003-multimedia.svg" alt="multimedia">
-
-                        <img src="assets/img/002-server.svg" alt="server">
-                </div> <!-- Section Image -->
-
-                <div class="section-body">
-                    <h2 class="section-header">Open Source Datasets in Bengali</h2>
-                    <p class="section-content">
-                        A common problem in data science is the acquisition of clean data from various sources that can be used in higher level analysis. Many data sets are now open source, but those data sets must be put to use before their value can be measured.
-                    </p>
-                    <p class="section-content">
-                        The CrowdFlower Data for Everyone library contains large, high-quality, real-world data sets collected by our customers and published with their permission. These open source, enriched data sets range from biomedical imagery to football strategy and are free for anyone to use. We are constantly updating our library to provide small researchers, academics, small businesses, and startups the tools necessary for success.
-                        <br />
-                        <a href="javascript: void(0)">Browse Open Source Datasets</a>
-                    </p>
-                </div> <!-- Section Body -->
-
-
-            </section> <!-- Dataset Section -->
-
-            <a id="contributeLink" href="#"></a>
-            <section id='contribute'>
-                <div class="landingImage topLeftLand">
-                    <img src="assets/img/signing.svg" alt="">
+                    <div class="slider-item" style="background-image: url('assets/img/backpropers1.jpg');">
+                        <div class="overlay"></div>
+                        <div class="container">
+                        <div class="row slider-text align-items-center" data-scrollax-parent="true">
+                            <div class="col-md-7 slider-caption col-sm-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                            <h2 class="mb-3" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Reaching out to a wider audience</h2>
+                            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">By giving them a platform to express themselves by learning and teaching.</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </section> <!-- home-slider -->
+            
+              <section id="activities" class="ftco-section bg-light">
+                <div class="container">
+                    <div class="row justify-content-center mb-5 pb-5">
+                    <div class="col-md-7 text-center heading-section ftco-animate">
+                        <h2>Explore our activities</h2>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-4 col-lg-4 d-flex align-self-stretch ftco-animate">
+                        <div class="media block-6 activities p-3 py-4 d-block text-center">
+                        <div class="icon mb-3"><span class="flaticon-intertwined"></span></div>
+                        <div class="media-body">
+                            <h3 class="heading">Research Paper Weekly</h3>
+                            <p>We hold weekly webinars to discuss interesting papers regarding AI and deep learning.</p>
+                        </div>
+                        </div>      
+                    </div>
+                    <div class="col-md-4 col-lg-4 d-flex align-self-stretch ftco-animate">
+                        <div class="media block-6 activities p-3 py-4 d-block text-center">
+                        <div class="icon mb-3"><span class="flaticon-discussion"></span></div>
+                        <div class="media-body">
+                            <h3 class="heading">Brain Dates</h3>
+                            <p>Mass "brain dates"- discussion sessions between newbies and experts to allow free exchange of knowledge.</p>
+                        </div>
+                        </div>      
+                    </div>
+                    <div class="col-md-4 col-lg-4 d-flex align-self-stretch ftco-animate">
+                        <div class="media block-6 activities p-3 py-4 d-block text-center">
+                        <div class="icon mb-3"><span class="flaticon-presentation"></span></div>
+                        <div class="media-body">
+                            <h3 class="heading">Hands on workshops</h3>
+                            <p>Workshops and tutorials on tackling problems and tricky cases that students may encounter in their research.</p>
+                        </div>
+                        </div>    
+                    </div>
+                    </div>
+                    <div class="row ftco-animate">
+                    <div class="col-md-12 text-center button-degree button-degree-dark-bg">
+                        <p><a href="#" class="btn action-button">Get in touch</a></p>
+                    </div>
+                    </div>
                 </div>
+                </section>
 
-                <div class="landingImage bottomRightLand">
-                    <img src="assets/img/hands.svg" alt="">
+                <section id="people" class="ftco-section">
+                        <div class="container">
+                        <div class="row justify-content-center mb-5 pb-5 ftco-animate">
+                                <div class="col-md-7 text-center heading-section">
+                                    <h2>People behind Bengali.Ai</h2>
+                                </div>
+                        </div>
+                          <div class="row people-row">
+                            <div class="col-md-4 ftco-animate">
+                              <div class="founder">
+                                <a href="#" class="founder-img mb-4" style="background-image: url(assets/img/priyoceo.jpg);"></a>
+                                <div class="text text-center">
+                                  <h3 class="mb-3">Ahmed Imtiaz Humayun <br><span class="position">Co-founder and CEO</span></h3>
+                                  <p>Surgery successful. Alhamdulillah for everything.</p>
+                                  <div class="button-degree button-degree-dark-bg">
+                                    <span><a href="#" class="btn px-4 py-3">View Profile</a></span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-4 ftco-animate">
+                              <div class="founder">
+                                <a href="#" class="founder-img mb-4" style="background-image: url(assets/img/rashed.jpg);"></a>
+                                <div class="text text-center">
+                                  <h3 class="mb-3">Rashed Doha <br><span class="position">Just Co-founder... :(</span></h3>
+                                  <p>I can't find my Dubai pics for some reason.</p>
+                                  <div class="button-degree button-degree-dark-bg">
+                                    <span><a href="#" class="btn px-4 py-3">View Profile</a></span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-4 ftco-animate">
+                              <div class="founder">
+                                <a href="#" class="founder-img mb-4" style="background-image: url(assets/img/samiul.jpg)"></a>
+                                <div class="text text-center">
+                                  <h3 class="mb-3">Samiul Alam <br><span class="position">Also just Co-founder</span></h3>
+                                  <p>Fries khaite hole nije order kor.</p>
+                                  <div class="button-degree button-degree-dark-bg">
+                                    <span><a href="#" class="btn px-4 py-3">View Profile</a></span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="row people-row">
+                                <div class="col-md-4 ftco-animate">
+                                  <div class="founder">
+                                    <a href="#" class="founder-img mb-4" style="background-image: url(assets/img/sakib.jpg);"></a>
+                                    <div class="text text-center">
+                                      <h3 class="mb-3">Sakib Noor <br><span class="position">Co-founder</span></h3>
+                                      <p>Co-founder of my band, not this community.</p>
+                                      <div class="button-degree button-degree-dark-bg">
+                                        <span><a href="#" class="btn px-4 py-3">View Profile</a></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-4 ftco-animate">
+                                  <div class="founder">
+                                    <a href="#" class="founder-img mb-4" style="background-image: url(assets/img/amit.jpg);"></a>
+                                    <div class="text text-center">
+                                      <h3 class="mb-3">Sharif Amit <br><span class="position">Co-founder</span></h3>
+                                      <p>Amar kotha bolte bhalo lage.</p>
+                                      <div class="button-degree button-degree-dark-bg">
+                                        <span><a href="#" class="btn px-4 py-3">View Profile</a></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-4 ftco-animate">
+                                  <div class="founder">
+                                    <a href="#" class="founder-img mb-4" style="background-image: url(assets/img/abrar.jpg)"></a>
+                                    <div class="text text-center">
+                                      <h3 class="mb-3">Abrar Ahmed <br><span class="position">Co-volunteer</span></h3>
+                                      <p>Ermahgahd.. I'm so happy to be here.</p>
+                                      <div class="button-degree button-degree-dark-bg">
+                                        <span><a href="#" class="btn px-4 py-3">View Profile</a></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                        </div>
+                      </section>
+
+            <!-- <section class="ftco-section bg-light">
+                <div class="container">
+                <div class="row justify-content-center mb-5 pb-5 ftco-animate">
+                    <div class="col-md-7 text-center heading-section">
+                    <h2>All in one Yoga classes</h2>
+                    </div>
                 </div>
-                <div class="section-body">
+                <div class="row">
+                    <div class="col-md-4 ftco-animate" data-scrollax-parent="true">
+                    <div class="classes" data-scrollax=" properties: { translateY: '-70%'}">
+                        <a href="#" class="classes-img mb-3" style="background-image: url(assets/img/discussion.jpg);"></a>
+                        <div class="text text-center">
+                        <h3><a href="#">Yoga Program</a></h3>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-md-4 ftco-animate">
+                    <div class="classes">
+                        <a href="#" class="classes-img mb-3" style="background-image: url(images/classes-2.jpg);"></a>
+                        <div class="text text-center">
+                        <h3><a href="#">Cardio Program</a></h3>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-md-4 ftco-animate" data-scrollax-parent="true">
+                    <div class="classes" data-scrollax=" properties: { translateY: '-100%'}">
+                        <a href="#" class="classes-img mb-3" style="background-image: url(images/classes-3.jpg);"></a>
+                        <div class="text text-center">
+                        <h3><a href="#">Body Building</a></h3>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="row mt-5 ftco-animate">
+                    <div class="col-md-12 text-center button-degree button-degree-outline-primary">
+                    <p><a href="#" class="btn px-5 py-4">Explore our classes</a></p>
+                    </div>
+                </div>
+                </div>
+            </section> -->
 
-                    <h2 class="section-header">Contributions by you are an essential part of this
-                    firm which we haven't named yet! </h2>
-
-                    <p class="section-content">
-                        If you or your organisation holds seabed habitat data, you can contribute directly to this firm we haven't named yet!
-                    </p>
-
-                    <p class="section-content">
-
-                        These days data is an extremely valuable resource, largely as a consequence of the cost of collection, processing and interpretation, and thus it is vital that they are maintained in a suitable form to ensure maximum value are extracted. Appropriate and efficient data archiving is a fundamental element to expedite the process of contributing your data to other projects or organisations data archiving. Data collation is the term used for gathering together existing data resources both from within an organisation and from external sources.
-                        <br />
-                        <a href="javascript: void(0)">Contribute Your Dataset</a>
-                    </p>
-                </div> <!-- Section Body -->
-
-            </section> <!-- Contribute Section -->
-
-            <a id="affiliateLink" href="#"></a>
-            <section id='affiliate'>
-
-                <div class="section-image">
-
-                    <div class="image-row">
-                        <img src="assets/img/deepmind.png" alt="deepmind">
-                        <img src="assets/img/kaggle.png" alt="kaggle">
-                        <img src="assets/img/nvidia.png" alt="nvidia">
-                    </div> <!-- Image row -->
-
-                </div> <!-- Section Image -->
-
-                <div class="section-body">
-                    <h2 class="section-header">We owe it all to these bigshots who we are in no way
-                    affiliated with!</h2>
-
-                </div> <!-- Section body -->
-
-            </section> <!-- Affiliations Section -->
-
+            <section id="testimonial" class="ftco-section testimony-section bg-light">
+                <div class="container">
+                    <div class="row justify-content-center mb-5 pb-5">
+                    <div class="col-md-7 text-center heading-section ftco-animate">
+                        <h2>Kind words by those who care</h2>
+                    </div>
+                    </div>
+                    <div class="row no-gutters ftco-animate justify-content-center">
+                    <div class="carousel owl-carousel col-md-9">
+                        <div class="item text-center">
+                        <div class="testimony-wrap p-5">
+                            <div class="user-img mb-4" style="background-image: url(assets/img/speech.jpg)"></div>
+                            <div class="text">
+                            <p class="mb-5"><strong>"</strong>I told them InshaAllah I will be at the finale. They sent a car to get me so I couldn't change my mind. That's devotion for you.<strong>"</strong></p>
+                            <p class="name">Kayekobad Sir</p>
+                            <span class="position">Guest Speaker</span>
+                            </div>
+                        </div>
+                        </div>
+                        
+                        <div class="item text-center">
+                        <div class="testimony-wrap p-5">
+                            <div class="user-img mb-4" style="background-image: url(assets/img/shakilbhai.jpg)"></div>
+                            <div class="text">
+                            <p class="mb-5"><strong>"</strong>I was astonished at the number of people involved with this wonderful project that can change the face of academia and research among all sectors of Bangladesh one day. <strong>"</strong></p>
+                            <p class="name">Mr. Shakil</p>
+                            <span class="position">Grameenphone</span>
+                            </div>
+                        </div>
+                        </div>
+                        <!-- <div class="item text-center">
+                        <div class="testimony-wrap p-5">
+                            <div class="user-img mb-4" style="background-image: url(images/person_1.jpg)"></div>
+                            <div class="text">
+                            <p class="mb-5"><strong>"</strong> Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                            <p class="name">Dennis Green</p>
+                            <span class="position">Body Builder</span>
+                            </div>
+                        </div>
+                        </div> -->
+                    </div>
+                    </div>
+                </div>
+                </section>
             <footer>
                 <div class="footer-main">
                     <div class="footer-logo">
-                        <img src="assets/img/004-database.svg" alt="logo">
+                        <img src="assets/img/bengali.ai_square.png" alt="logo">
                     </div> <!-- footer logo -->
 
-                    <div class="footer-column-3 footer-column">
-
-                        <div class="footer-header">
-                            <span>Partner Programs</span>
-                        </div> <!-- footer header -->
-
-                        <div class="links-column">
-                            <a href="javascript: void(0)">Affiliates</a>
-                            <a href="javascript: void(0)">The Team</a>
-                            <a href="javascript: void(0)">Buy Us A Coffee</a>
-                            <a href="javascript: void(0)">Visit</a>
-                            <a href="javascript: void(0)">Terms of use</a>
-                        </div> <!-- Links column -->
-
-                    </div> <!-- footer column 3 -->
-
-                    <div class="footer-column-2 footer-column">
-
-                        <div class="footer-header">
-                            <span>Support</span>
-                        </div> <!-- footer header -->
-                        <div class="links-column">
-                            <a href="javascript: void(0)">About Us</a>
-                            <a href="javascript: void(0)">Contact Us</a>
-                            <a href="javascript: void(0)">Datasets</a>
-                            <a href="javascript: void(0)">Tutorials</a>
-                            <a href="javascript: void(0)">Legal</a>
-                        </div> <!-- Links column -->
-
-
-                    </div> <!-- footer column 2 -->
 
                     <div class="footer-column-1 footer-column">
                         <div class="footer-header">
@@ -262,8 +377,20 @@
 
 
     </body>
-    <script src='assets/js/libs/jquery-2.1.4.min.js'></script>
-    <script src='assets/js/libs/scrollspy.js'></script>
+    <script src='assets/js/libs/jquery-3.2.1.min.js'></script>
+    <script src="assets/js/libs/jquery-migrate-3.0.1.min.js"></script>
+  <script src="assets/js/libs/popper.min.js"></script>
+  <script src="assets/js/libs/bootstrap.min.js"></script>
+  <script src="assets/js/libs/jquery.easing.1.3.js"></script>
+  <script src="assets/js/libs/jquery.waypoints.min.js"></script>
+  <script src="assets/js/libs/jquery.stellar.min.js"></script>
+  <script src="assets/js/libs/owl.carousel.min.js"></script>
+  <script src="assets/js/libs/jquery.magnific-popup.min.js"></script>
+  <script src="assets/js/libs/aos.js"></script>
+  <script src="assets/js/libs/jquery.animateNumber.min.js"></script>
+  <script src="assets/js/libs/scrollax.min.js"></script>
+  <script src="assets/js/libs/bootstrap-datepicker.js"></script>
+  <script src="assets/js/libs/jquery.timepicker.min.js"></script>
     <script src='assets/js/main.js'></script>
 
 </html>
