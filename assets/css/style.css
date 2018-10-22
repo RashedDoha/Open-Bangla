@@ -504,6 +504,58 @@ border: 1px solid red; }
       color: #c0c0c3;
       font-weight: 400; }
 
+/* Contact Section */
+
+.contact-section {
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+}
+
+.contact-section .heading-section h2 {
+    color: white;
+    font-family: 'Raleway', 'serif';
+    font-size: 30px;
+}
+
+.form-group {
+    text-align: center;
+}
+
+input.contact-input, textarea.contact-textarea {
+    width: 100%;
+    border: none;
+    background-color: rgba(255,255,255,0.5);
+    padding: 15px;
+    font-family: 'Raleway', 'serif';
+}
+
+input.contact-input:focus, textarea.contact-textarea:focus {
+    outline: none;
+}
+
+input.contact-submit-button {
+    background-color: #00baff;
+    border: none;
+    color: white;
+    font-family: 'Raleway', 'serif';
+    font-weight: bold;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+
+@media(max-width: 767.98px) {
+    input.contact-input {
+        margin-bottom: 2rem;
+    }
+
+    .contact-row {
+        margin-bottom: 0 !important;
+    }
+}
+
 section.hero img.hero-image
 {
     width: 50%;
