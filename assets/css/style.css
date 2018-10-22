@@ -43,7 +43,9 @@ body {
 }
 
 .heading-section h2 {
-    font-weight: 500; }
+    font-weight: 500;
+    font-family: 'Raleway', 'serif';
+ }
 
 /* Section 1 */
 
