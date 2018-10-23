@@ -58,6 +58,10 @@ body {
 	background-color: #dbdbdb
 }
 
+section {
+	padding: 95px 0;
+}
+
 section,
 .option-box .color-option,
 .option-box .gear-check,
@@ -70,7 +74,7 @@ header .text-header h1,
 .lb-dataContainer,
 .scroll-top,
 .resume .ex-container:before {
-	background: #f3f3f3
+	background: #f3f3f3;
 }
 
 .nav-scroll {

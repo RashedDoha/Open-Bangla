@@ -558,6 +558,9 @@ input.contact-submit-button {
     }
 }
 
+section.bio {
+    background: #fff;
+}
 
 section.bio .intro-image .icon-style {
     margin: 43px 11px 0;
@@ -633,6 +636,125 @@ section.bio .intro-text h1 {
     font-family: 'Raleway', 'serif';
 }
 
+/*========== Start Resume ===========*/
+
+.resume {
+	position: relative
+}
+
+.resume .ex-container .mb-head {
+	margin-bottom: 57px
+}
+
+.resume .ex-container .mt-head {
+	margin-top: 57px
+}
+
+.resume .ex-container {
+	padding: 0 5px 13px;
+	margin: 50px auto;
+	position: relative;
+	overflow: hidden;
+	width: 83%
+}
+
+.resume .ex-container:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -1px;
+	width: 2px;
+	height: 100%;
+	background: #f3f3f3;
+	z-index: 1
+}
+
+.resume .ex-container:before,
+.resume .marker,
+.resume .marker-head i {
+	-webkit-box-shadow: -1px 1px 1px 1px #151b25;
+	-moz-box-shadow: -1px 1px 1px 1px #151b25;
+	-o-box-shadow: -1px 1px 1px 1px #151b25;
+	box-shadow: -1px 1px 1px 1px #151b25
+}
+
+.resume .ex-shadow:hover {
+	-webkit-box-shadow: 0px 1px 12px 0px #00000073;
+	-moz-box-shadow: 0px 1px 12px 0px #00000073;
+	-o-box-shadow: 0px 1px 12px 0px #00000073;
+	box-shadow: 0px 1px 12px 0px #00000073
+}
+
+.resume .ex-block {
+	width: -webkit-calc(50% + 8px);
+	width: -moz-calc(50% + 8px);
+	width: calc(50% + 8px);
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-moz-box-pack: justify;
+	justify-content: space-between;
+	clear: both
+}
+
+.resume .ex-block-right {
+	float: right
+}
+
+.resume .ex-block-left {
+	float: left;
+	direction: rtl
+}
+
+.resume .marker {
+	width: 23px;
+	height: 23px;
+	border-radius: 50%;
+	border: 8px solid #f3f3f3;
+	z-index: 9;
+	margin: 43px -4px auto
+}
+
+.resume .ex-content {
+	width: 94%;
+	padding: 18px 16px 0
+}
+
+.resume .ex-content span {
+	font-weight: 600;
+	letter-spacing: 1px;
+	display: block;
+	margin: 10px 0;
+	font-size: 18px
+}
+
+.resume .marker-head {
+	z-index: 9
+}
+
+.resume .marker-head i {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	text-align: center;
+	margin-left: -32px;
+	font-size: 45px;
+	color: #f3f3f3;
+	line-height: 89px
+}
+
+
+/*========== End Resume ===========*/
+
+
+
+
+
+
 section.hero img.hero-image
 {
     width: 50%;
@@ -696,12 +818,39 @@ section.people-faces .face > img
     opacity: 0;
     visibility: hidden; }
 
-.icon-style {
-    -webkit-transition: color .6s ease;
-    -moz-transition: color .6s ease;
-    -o-transition: color .6s ease;
+.icon-style{
     transition: color .6s ease;
 }
+
+.navbar,
+.services .card-body:after,
+.services .card-body:before,
+.services .card-body:hover .line-card,
+.services .line-card,
+.about .bnt-about a:hover,
+.about .bnt-about a,
+.about .img-about:before,
+.about .img-about:hover:before,
+.video-bg:before,
+.video-bg:hover:before,
+.video-bg .video i,
+.video-bg .video:hover i,
+.works ul li:before,
+.works ul li,
+.works .gallery .item .overlay,
+.works .gallery .item:hover .overlay,
+.works .gallery .card-body h6,
+.works .gallery .card-body span,
+.works .gallery .item .overlay i,
+.resume .ex-shadow:hover,
+.resume .ex-shadow,
+.contacts form .form-control {
+	-webkit-transition: all .6s ease;
+	-moz-transition: all .6s ease;
+	-o-transition: all .6s ease;
+	transition: all .6s ease
+}
+
 
 footer {
     background-color: #202020;
@@ -939,4 +1088,63 @@ footer .footer-main .footer-column-1 .social-icons > a:nth-child(1) {
     #canvasDiv {
         margin: 20px 10px 0 0;
     }
+}
+
+/* Media 797px */
+
+@media (max-width:767px) {
+	h2,
+	h1 {
+		font-size: 28px !important
+	}
+	h4 {
+		font-size: 20px !important
+	}
+	p {
+		font-size: 15px !important
+	}
+	.contacts ul {
+		margin-top: 24px
+	}
+	.resume .ex-container {
+		overflow: inherit
+	}
+	.resume .ex-container:before {
+		left: 8px;
+		width: 2px
+	}
+	.resume .ex-block {
+		width: 100%;
+		margin-bottom: 30px
+	}
+	.resume .ex-block-right {
+		float: none
+	}
+	.resume .ex-block-left {
+		float: none;
+		direction: ltr
+	}
+	.resume .marker {
+		margin-left: -7px
+	}
+	.resume .marker-head i {
+		width: 55px;
+		height: 55px;
+		margin-left: -24px;
+		font-size: 36px;
+		line-height: 63px;
+	}
+	.video-bg .video i {
+		font-size: 35px;
+		width: 58px;
+		height: 58px;
+		line-height: 58px
+	}
+	.video-bg h3 {
+		font-size: 22px
+	}
+	.rights {
+		text-align: center;
+		display: block;
+	}
 }
