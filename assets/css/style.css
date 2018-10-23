@@ -558,6 +558,81 @@ input.contact-submit-button {
     }
 }
 
+
+section.bio .intro-image .icon-style {
+    margin: 43px 11px 0;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 22px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+section.bio .intro-image img {
+    -webkit-box-shadow: 0 0 0 9px #f3f3f3;
+    -o-box-shadow: 0 0 0 9px #f3f3f3;
+    -moz-box-shadow: 0 0 0 9px #f3f3f3;
+    box-shadow: 0 0 0 9px #f3f3f3;
+}
+
+section.bio .divider hr {
+    display: none;
+}
+
+
+section.bio .intro-image:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 1px;
+    height: 50%;
+    background: #d4d4d4;
+    z-index: 1;
+}
+
+section.bio .intro-image:before{
+    content: 'About Me';
+    position: absolute;
+    letter-spacing: 0.8em;
+    top: 70%;
+    width: 50%;
+    left: 75%;
+    z-index: 1;
+    transform: rotate(90deg);
+    font-family: 'Raleway';
+}
+
+@media(max-width: 992px) {
+
+    section.bio .divider hr {
+        display: block;
+    }
+
+    section.bio .intro-image:before, .intro-image:after{
+        display: none;
+    }
+
+}
+
+section.bio .intro-image:before:hover {
+    content: 'About Me NIGGA';
+}
+
+section.bio .divider {
+    margin-bottom: 2rem;
+}
+
+i.contact-icon {
+    transition: color .6s ease;
+}
+
+
+section.bio .intro-text h1 {
+    font-family: 'Raleway', 'serif';
+}
+
 section.hero img.hero-image
 {
     width: 50%;
@@ -621,6 +696,12 @@ section.people-faces .face > img
     opacity: 0;
     visibility: hidden; }
 
+.icon-style {
+    -webkit-transition: color .6s ease;
+    -moz-transition: color .6s ease;
+    -o-transition: color .6s ease;
+    transition: color .6s ease;
+}
 
 footer {
     background-color: #202020;
